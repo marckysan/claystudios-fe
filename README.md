@@ -38,6 +38,6 @@ This web application has been dockerized, built and served with NGINX locally.
   docker compose up
 ```
 2. Check and ensure that you are able to load up the applications on localhost correctly.
-  a. Frontend Check - Navigate to "localhost:8888", you should see the application loading up
-  b. Backend Check - Navigate to "localhost:6868/health", you should see a JSON message "Backend health check!"
+- Frontend Check - Navigate to "localhost:8888", you should see the application loading up
+- Backend Check - Navigate to "localhost:6868/health", you should see a JSON message "Backend health check!"
 3. You are ready to start developing!
