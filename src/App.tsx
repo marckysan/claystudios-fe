@@ -1,8 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import axios from "axios";
+import React from "react";
+import "./App.css";
+import logo from "./logo.svg";
 
 function App() {
+  // axios.get("http://localhost:6868/health").then(
+  //   (response) => {
+  //     console.log(response);
+  //   },
+  //   (error) => {
+  //     console.log(error);
+  //   }
+  // );
+
   return (
     <div className="App">
       <header className="App-header">

@@ -29,7 +29,18 @@ This repository is to migrate the website to a full stack application powered by
     cd ..
   ```
 5. Proceed to spin up the application.
-## Spinning Up the Application
+## Spinning up for Development
+To spin up both the Frontend and the Backend, simply run the navigate into the "-fe" and "-be" folder and run the following command
+```
+  npm run start
+```
+2. Check and ensure that you are able to load up the applications on localhost correctly.
+- Frontend Check - Navigate to "localhost:3000", you should see the application loading up
+- Backend Check - Navigate to "localhost:8080/health", you should see a JSON message "Backend health check!"
+3. You are ready to start developing!
+
+
+## Spinning Up for Production
 This web application has been dockerized, built and served with NGINX locally. 
 
 1. To spin up both the Frontend and the Backend, simply run the following commands while you're in the main "claystudios" folder directory. 
@@ -40,4 +51,5 @@ This web application has been dockerized, built and served with NGINX locally.
 2. Check and ensure that you are able to load up the applications on localhost correctly.
 - Frontend Check - Navigate to "localhost:8888", you should see the application loading up
 - Backend Check - Navigate to "localhost:6868/health", you should see a JSON message "Backend health check!"
-3. You are ready to start developing!
+3. You are ready to test the production build!
+
