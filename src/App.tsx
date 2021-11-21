@@ -1,7 +1,13 @@
 // import axios from "axios";
 import React from "react";
+import { Route } from "react-router-dom";
 import "./App.css";
-import logo from "./logo.svg";
+import Header from "./components/header/header";
+import Home from "./pages/home/home";
+import Meet from "./pages/meet/meet";
+import Seek from "./pages/seek/seek";
+import Us from "./pages/us/us";
+import Yours from "./pages/yours/yours";
 
 function App() {
   // axios.get("http://localhost:6868/health").then(
@@ -14,21 +20,23 @@ function App() {
   // );
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Route path="/">
+        <Home />
+      </Route>
+      <Route path="/yours">
+        <Yours />
+      </Route>
+      <Route path="/seek">
+        <Seek />
+      </Route>
+      <Route path="/us">
+        <Us />
+      </Route>
+      <Route path="/meet">
+        <Meet />
+      </Route>
     </div>
   );
 }
