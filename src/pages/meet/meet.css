@@ -1,0 +1,78 @@
+.centerSection {
+  display: flex;
+  flex-direction: row;
+}
+
+.meetContainer {
+  width: calc((100vw/4 + 0.1vw));
+  height: calc(100vh - 28vh);
+  display:flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.meetText {
+  writing-mode: vertical-rl;
+  font-size: 5vh;
+  color: white;
+  height:100%;
+  width:90%;
+  margin-top: calc(((100vh - 28vh)/4)/4);
+  font-family: 'Chivo';
+}
+
+.rightSection {
+  width: calc((300vw/4 + 0.1vw));
+  height: calc(100vh - 28vh);
+  align-content: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.map {
+  height: 70%;
+  align-content: center;
+  justify-content: center;
+  padding-left: 5%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding-left: 5%;
+  align-content: center;
+  justify-content: center;
+}
+
+.office {
+  width: 27%
+}
+
+.call {
+  width: 27%
+}
+
+.nameCard {
+  width: 27%
+}
+
+.socials {
+  width: 9%
+}
+
+.enquiry {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  padding-left: 5%;
+}
+
+.inputSection {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
