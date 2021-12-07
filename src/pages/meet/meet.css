@@ -4,9 +4,9 @@
 }
 
 .meetContainer {
-  width: calc((100vw/4 + 0.1vw));
+  width: calc((100vw / 4 + 0.1vw));
   height: calc(100vh - 28vh);
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-content: center;
 }
@@ -15,17 +15,18 @@
   writing-mode: vertical-rl;
   font-size: 3.3vw;
   color: white;
-  height:100%;
-  width:90%;
-  margin-top: calc(((100vh - 28vh)/4)/4);
-  font-family: 'Chivo';
+  height: 100%;
+  width: 90%;
+  margin-top: calc(((100vh - 28vh) / 4) / 4);
+  font-family: "Chivo";
 }
 
 .rightSection {
-  width: calc((300vw/4 + 0.1vw));
+  width: calc((300vw / 4 + 0.1vw));
   height: calc(100vh - 28vh);
   align-items: center;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .map {
@@ -59,25 +60,51 @@
   font-family: "Chivo";
 }
 
-
-.leftArrow {
-  width:100%;
-  height:1.5vw;
-  display: flex;
-  transform: rotate(180deg);
-  margin-top: -2.3vw;
-}
-.leftArrow:before {
-  content: "";
-  border:none;
-  border-top: 1.4vw dotted black;
-  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
-  animation: leftArrowAnimate 2.5s forwards linear;
-}
-@keyframes leftArrowAnimate {
-  90%,100%{flex-grow: 1}
+.leftArrowDiv {
+  margin-top: -2.5vw;
 }
 
+.fadingLeftEffect {
+  position: relative;
+  width: 100%;
+  height: 1.5vw;
+  z-index: 4vw !important;
+  margin-top: -1.5vw;
+  background-color: white;
+  opacity: 1;
+  animation: show 2.5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.fadingRightEffect {
+  position: relative;
+  width: 100%;
+  height: 1.5vw;
+  z-index: 4vw !important;
+  margin-top: -1.5vw;
+  background-color: white;
+  animation: showRight 2.5s ease;
+  animation-fill-mode: forwards;
+  /* animation-direction: reverse !important; */
+}
+
+@keyframes showRight {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
 
 .contactContent {
   display: flex;
@@ -86,19 +113,19 @@
 }
 
 .office {
-  width: 27%
+  width: 27%;
 }
 
 .call {
-  width: 27%
+  width: 27%;
 }
 
 .nameCard {
-  width: 27%
+  width: 27%;
 }
 
 .socials {
-  width: 9%
+  width: 9%;
 }
 
 .enquiry {
@@ -124,20 +151,31 @@
 }
 
 .rightArrow {
-  width:100%;
-  height:1.5vw;
+  width: 100%;
+  height: 1.5vw;
   display: flex;
   margin-top: -2.3vw;
 }
 .rightArrow:before {
   content: "";
-  border:none;
+  border: none;
   border-top: 1.4vw dotted black;
-  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+  clip-path: polygon(
+    0 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 0,
+    100% 50%,
+    calc(100% - 15px) 100%,
+    calc(100% - 15px) calc(100% - 10px),
+    0 calc(100% - 10px)
+  );
   animation: rightArrowAnimate 2.5s forwards linear;
 }
 @keyframes rightArrowAnimate {
-  90%,100%{flex-grow: 1}
+  90%,
+  100% {
+    flex-grow: 1;
+  }
 }
 
 .inputSection {
