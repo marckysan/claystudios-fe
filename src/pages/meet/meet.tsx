@@ -32,7 +32,14 @@ const Meet: FC = () => {
           <div className="contact">
             <div className="contactHeader">
               <h3 className="contactHeaderWords">Let's Meet!</h3>
-              <div className="leftArrow"></div>
+              <div className="leftArrowDiv">
+                <img
+                  src={require("../../assets/images/leftArrow.svg").default}
+                  alt="Left Arrow"
+                  style={{ width: "100%", height: "100%" }}
+                />
+                <div className="fadingLeftEffect"></div>
+              </div>
             </div>
             <div className="contactContent">
               <div className="office">
@@ -60,7 +67,18 @@ const Meet: FC = () => {
           <div className="enquiry">
             <div className="enquiryHeader">
               <h3 className="enquiryHeaderWords">Send an Enquiry</h3>
-              <div className="rightArrow"></div>
+              <div className="leftArrowDiv">
+                <img
+                  src={require("../../assets/images/leftArrow.svg").default}
+                  alt="Left Arrow"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    transform: "rotate(180deg)",
+                  }}
+                />
+                <div className="fadingRightEffect"></div>
+              </div>
             </div>
             <div className="inputSection">
               <label>First Name</label>
