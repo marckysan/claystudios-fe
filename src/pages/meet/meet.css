@@ -107,9 +107,11 @@
 }
 
 .contactContent {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  gap: 2.5vw;
 }
 
 .office {
@@ -126,6 +128,18 @@
 
 .socials {
   width: 9%;
+}
+
+.contactLabel {
+  font-size: 2vw;
+  font-weight: lighter;
+  font-family: "Chivo";
+}
+
+.contactText {
+  font-size: 1vw;
+  font-weight: lighter;
+  font-family: "Chivo";
 }
 
 .enquiry {

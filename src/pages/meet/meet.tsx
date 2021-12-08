@@ -53,18 +53,22 @@ const Meet: FC = () => {
             </div>
             <div className="contactContent">
               <div className="office">
-                <p>Office:</p>
-                <p>
-                  3027 Ubi Road 1, #04-122, Kampong Ubi Industrial Estate
+                <h2 className="contactLabel">Office:</h2>
+                <p className="contactText">
+                  3027 Ubi Road 1, #04-122,
+                  <br /> Kampong Ubi Industrial Estate <br />
                   Singapore
                 </p>
               </div>
               <div className="call">
-                <p>Call:</p>
-                <p>+65 9866 2341 (M) +65 6635 2166 (O)</p>
+                <h2 className="contactLabel">Call:</h2>
+                <p className="contactText">
+                  +65 9866 2341 (M) <br />
+                  +65 6635 2166 (O)
+                </p>
               </div>
               <div className="nameCard">
-                <p>Name Card:</p>
+                <h2 className="contactLabel">Name Card:</h2>
                 <button>Download</button>
               </div>
               <div className="socials">
