@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { useInView } from "react-intersection-observer";
+import { SocialIcon } from "react-social-icons";
 import meetImage from "../../assets/images/meetImage.png";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
@@ -23,7 +24,7 @@ const Meet: FC = () => {
   };
 
   return (
-    <div>
+    <div style={{ width: "100vw", overflowY: "hidden" }}>
       <Header />
       <div className="centerSection">
         <div className="meetContainer">
@@ -41,7 +42,14 @@ const Meet: FC = () => {
           ></iframe>
           <div className="contact">
             <div className="contactHeader">
-              <h3 className="contactHeaderWords">Let's Meet!</h3>
+              <h3 className="contactHeaderWords">
+                <SocialIcon
+                  url="https://www.instagram.com/claystudios_sg/"
+                  bgColor="white"
+                  fgColor="black"
+                />
+                Let's Meet!
+              </h3>
               <div className="leftArrowDiv">
                 <img
                   src={require("../../assets/images/leftArrow.svg").default}
@@ -76,11 +84,6 @@ const Meet: FC = () => {
                 <div className="btn" onClick={() => downloadNameCard()}>
                   <span className="noselect">Download</span>
                 </div>
-              </div>
-              <div className="socials">
-                <button>IG</button>
-                <button>FB</button>
-                <button>Email</button>
               </div>
             </div>
           </div>
