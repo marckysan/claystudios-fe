@@ -15,7 +15,7 @@ const Meet: FC = () => {
     width: "100%",
     height: "100%",
     backgroundImage: `url(${meetImage})`,
-    "text-decoration": "none",
+    textDecoration: "none",
   };
 
   return (
@@ -69,7 +69,9 @@ const Meet: FC = () => {
               </div>
               <div className="nameCard">
                 <h2 className="contactLabel">Name Card:</h2>
-                <button>Download</button>
+                <div className="btn">
+                  <span className="noselect">Download</span>
+                </div>
               </div>
               <div className="socials">
                 <button>IG</button>

@@ -94,7 +94,6 @@
   background-color: white;
   animation: showRight 2.5s ease;
   animation-fill-mode: forwards;
-  /* animation-direction: reverse !important; */
 }
 
 @keyframes showRight {
@@ -120,6 +119,7 @@
 
 .call {
   width: 27%;
+  padding-left: 4%;
 }
 
 .nameCard {
@@ -137,7 +137,7 @@
 }
 
 .contactText {
-  font-size: 1vw;
+  font-size: 1.1vw;
   font-weight: lighter;
   font-family: "Chivo";
 }
@@ -164,38 +164,80 @@
   font-family: "Chivo";
 }
 
-.rightArrow {
-  width: 100%;
-  height: 1.5vw;
-  display: flex;
-  margin-top: -2.3vw;
-}
-.rightArrow:before {
-  content: "";
-  border: none;
-  border-top: 1.4vw dotted black;
-  clip-path: polygon(
-    0 10px,
-    calc(100% - 15px) 10px,
-    calc(100% - 15px) 0,
-    100% 50%,
-    calc(100% - 15px) 100%,
-    calc(100% - 15px) calc(100% - 10px),
-    0 calc(100% - 10px)
-  );
-  animation: rightArrowAnimate 2.5s forwards linear;
-}
-@keyframes rightArrowAnimate {
-  90%,
-  100% {
-    flex-grow: 1;
-  }
-}
-
 .inputSection {
   align-self: center;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  text-align: justify;
+}
+
+/**** Download Button ****/
+
+body {
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 8vw;
+  height: 3vw;
+  border: 0.1vw solid #333;
+  font-family: "Chivo";
+  font-size: 1.2vw;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 1s;
+  box-sizing: border-box;
+}
+
+.btn::before,
+.btn::after {
+  position: absolute;
+  background: white;
+  z-index: -1;
+  transition: 1s;
+  content: "";
+}
+
+.btn::before {
+  height: 0.1vw;
+  width: 0.5vw;
+}
+
+.btn::after {
+  width: 150px;
+  height: 30px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn:hover::before {
+  width: 0;
+  background: #fff;
+}
+
+.btn:hover::after {
+  height: 0;
+  background: #fff;
+}
+
+.btn:hover {
+  background: #fff;
 }

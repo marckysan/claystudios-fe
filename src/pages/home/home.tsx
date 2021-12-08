@@ -23,28 +23,28 @@ const Home: FC = () => {
     width: "100%",
     height: "100%",
     backgroundImage: `url(${yoursImage})`,
-    "text-decoration": "none",
+    textDecoration: "none",
   };
 
   const seekSectionDiv = {
     width: "100%",
     height: "100%",
     backgroundImage: `url(${seekImage})`,
-    "text-decoration": "none",
+    textDecoration: "none",
   };
 
   const usSectionDiv = {
     width: "100%",
     height: "100%",
     backgroundImage: `url(${usImage})`,
-    "text-decoration": "none",
+    textDecoration: "none",
   };
 
   const meetSectionDiv = {
     width: "100%",
     height: "100%",
     backgroundImage: `url(${meetImage})`,
-    "text-decoration": "none",
+    textDecoration: "none",
   };
 
   return isLoading ? (
