@@ -27,6 +27,12 @@
   align-items: center;
   overflow-y: scroll;
   overflow-x: hidden;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+}
+
+.rightSection::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 .map {
@@ -114,20 +120,16 @@
 }
 
 .office {
-  width: 27%;
+  width: 33%;
 }
 
 .call {
-  width: 27%;
+  width: 33%;
   padding-left: 4%;
 }
 
 .nameCard {
-  width: 27%;
-}
-
-.socials {
-  width: 9%;
+  width: 33%;
 }
 
 .contactLabel {
