@@ -1,81 +1,80 @@
 .homeSection {
-  width:100%;
+  width: 100%;
   height: calc(100vh - 28vh);
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-content: center;
-  overflow:hidden
+  overflow: hidden;
 }
-
 
 .yoursText {
   writing-mode: vertical-rl;
   font-size: 5vh;
   color: white;
-  height:100%;
-  width:90%;
-  margin-top: calc(((100vh - 28vh)/4)*3);
-  font-family: 'Chivo';
+  height: 100%;
+  width: 90%;
+  margin-top: calc(((100vh - 28vh) / 4) * 3);
+  font-family: "Chivo";
 }
 
 .seekText {
   writing-mode: vertical-rl;
   font-size: 5vh;
   color: white;
-  height:100%;
-  width:90%;
-  margin-top: calc(((100vh - 28vh)/4)*2);
-  font-family: 'Chivo';
+  height: 100%;
+  width: 90%;
+  margin-top: calc(((100vh - 28vh) / 4) * 2);
+  font-family: "Chivo";
 }
 
 .usText {
   writing-mode: vertical-rl;
   font-size: 5vh;
   color: white;
-  height:100%;
-  width:90%;
-  margin-top: calc(((100vh - 28vh)/4) + 2vh);
-  font-family: 'Chivo';
+  height: 100%;
+  width: 90%;
+  margin-top: calc(((100vh - 28vh) / 4) + 2vh);
+  font-family: "Chivo";
 }
 
 .meetText {
   writing-mode: vertical-rl;
   font-size: 5vh;
   color: white;
-  height:100%;
-  width:90%;
-  margin-top: calc(((100vh - 28vh)/4)/4);
-  font-family: 'Chivo';
+  height: 100%;
+  width: 90%;
+  margin-top: calc(((100vh - 28vh) / 4) / 4);
+  font-family: "Chivo";
 }
 
 .yoursContainer {
-  width: calc((100vw/4 + 0.1vw));
+  width: calc((100vw / 4 + 0.1vw));
   height: calc(100vh - 28vh);
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-content: center;
 }
 
 .seekContainer {
-  width: calc((100vw/4 + 0.1vw));
+  width: calc((100vw / 4 + 0.1vw));
   height: calc(100vh - 28vh);
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-content: center;
 }
 
 .usContainer {
-  width: calc((100vw/4 + 0.1vw));
+  width: calc((100vw / 4 + 0.1vw));
   height: calc(100vh - 28vh);
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-content: center;
 }
 
 .meetContainer {
-  width: calc((100vw/4 + 0.1vw));
+  width: calc((100vw / 4 + 0.1vw));
   height: calc(100vh - 28vh);
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-content: center;
 }
