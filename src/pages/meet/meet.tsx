@@ -18,6 +18,10 @@ const Meet: FC = () => {
     textDecoration: "none",
   };
 
+  const downloadNameCard = () => {
+    window.open("https://google.com");
+  };
+
   return (
     <div>
       <Header />
@@ -69,7 +73,7 @@ const Meet: FC = () => {
               </div>
               <div className="nameCard">
                 <h2 className="contactLabel">Name Card:</h2>
-                <div className="btn">
+                <div className="btn" onClick={() => downloadNameCard()}>
                   <span className="noselect">Download</span>
                 </div>
               </div>
