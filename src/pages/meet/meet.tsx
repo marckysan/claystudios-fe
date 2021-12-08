@@ -1,10 +1,16 @@
 import React, { FC } from "react";
+import { useInView } from "react-intersection-observer";
 import meetImage from "../../assets/images/meetImage.png";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
 import "./meet.css";
 
 const Meet: FC = () => {
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
   const meetSectionDiv = {
     width: "100%",
     height: "100%",
@@ -36,7 +42,11 @@ const Meet: FC = () => {
                 <img
                   src={require("../../assets/images/leftArrow.svg").default}
                   alt="Left Arrow"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "0.5vw",
+                  }}
                 />
                 <div className="fadingLeftEffect"></div>
               </div>
@@ -67,7 +77,7 @@ const Meet: FC = () => {
           <div className="enquiry">
             <div className="enquiryHeader">
               <h3 className="enquiryHeaderWords">Send an Enquiry</h3>
-              <div className="leftArrowDiv">
+              <div className="leftArrowDiv" ref={ref}>
                 <img
                   src={require("../../assets/images/leftArrow.svg").default}
                   alt="Left Arrow"
@@ -77,7 +87,10 @@ const Meet: FC = () => {
                     transform: "rotate(180deg)",
                   }}
                 />
-                <div className="fadingRightEffect"></div>
+                <div
+                  className="fadingRightEffect"
+                  style={{ animationPlayState: inView ? "running" : "paused" }}
+                ></div>
               </div>
             </div>
             <div className="inputSection">
