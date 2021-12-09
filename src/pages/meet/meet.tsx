@@ -1,18 +1,58 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import meetImage from "../../assets/images/meetImage.png";
+import seekImage from "../../assets/images/seekImage.png";
+import usImage from "../../assets/images/usImage.png";
+import yoursImage from "../../assets/images/yoursImage.png";
 import EnquiryForm from "../../components/enquiryForm/enquiryForm";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
 import "./meet.css";
 
 const Meet: FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+      console.log(isLoading);
+    }, 5000);
+  }, [isLoading]);
+
   const { ref, inView } = useInView({
     /* Optional options */
     threshold: 0,
   });
+
+  const yoursSectionDiv = {
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(${yoursImage})`,
+    textDecoration: "none",
+  };
+
+  const seekSectionDiv = {
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(${seekImage})`,
+    textDecoration: "none",
+  };
+
+  const usSectionDiv = {
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(${usImage})`,
+    textDecoration: "none",
+  };
+
+  const meetSectionDivLoading = {
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(${meetImage})`,
+    textDecoration: "none",
+  };
 
   const meetSectionDiv = {
     width: "100%",
@@ -21,7 +61,34 @@ const Meet: FC = () => {
     textDecoration: "none",
   };
 
-  return (
+  return isLoading ? (
+    <div style={{ width: "100%", height: "100%", overflow: "hidden" }}>
+      <Header />
+      <div className="homeSection">
+        <div className="yoursContainerMeet">
+          <div style={yoursSectionDiv} className="yoursSection">
+            <p className="yoursText">yours</p>
+          </div>
+        </div>
+        <div className="seekContainerMeet">
+          <div style={seekSectionDiv}>
+            <p className="seekText">seek</p>
+          </div>
+        </div>
+        <div className="usContainerMeet">
+          <div style={usSectionDiv}>
+            <p className="usText">us</p>
+          </div>
+        </div>
+        <div className="meetContainerMeet">
+          <div style={meetSectionDivLoading}>
+            <p className="meetText">meet</p>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  ) : (
     <div style={{ width: "100vw", overflowY: "hidden" }}>
       <Header />
       <div className="centerSection">
