@@ -1,0 +1,83 @@
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+}
+
+.formGroupMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1vw;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1vw;
+}
+
+.labelText {
+  text-align: start;
+  align-self: flex-start;
+  font-size: 1.5vw;
+  font-weight: lighter;
+  font-family: "Chivo";
+}
+
+.inputFormControl {
+  border-width: 0;
+  background-color: #2121210f;
+  border-radius: 8px;
+  height: 1vw;
+  width: 90%;
+  padding: 5%;
+  font-size: 1.2vw;
+  font-family: "Chivo";
+  font-weight: lighter;
+}
+
+.inputFormControlTextArea {
+  border-width: 0;
+  background-color: #2121210f;
+  border-radius: 8px;
+  height: 4vw;
+  width: 90%;
+  max-width: 90%;
+  padding: 5%;
+  font-size: 1.2vw;
+  font-family: "Chivo";
+  font-weight: lighter;
+  resize: vertical;
+}
+
+.checkBoxDescription {
+  font-size: 1vw;
+  font-family: "Chivo";
+  font-weight: lighter;
+  text-align: justify;
+}
+
+.submitBtn {
+  align-self: flex-end;
+  border: transparent;
+  border-width: 0vw;
+  border-radius: 5px;
+  width: 8vw;
+  height: 2.5vw;
+  background-color: rgb(124, 124, 124);
+  color: white;
+  font-family: "Chivo";
+}
