@@ -52,7 +52,7 @@ select:focus {
 .inputFormControlTextArea {
   border-width: 0;
   background-color: #2121210f;
-  border-radius: 8px;
+  border-radius: 5px;
   height: 4vw;
   width: 90%;
   max-width: 90%;
@@ -80,4 +80,16 @@ select:focus {
   background-color: rgb(124, 124, 124);
   color: white;
   font-family: "Chivo";
+  font-size: 1vw;
+  white-space: nowrap;
+  padding: 1%;
+}
+
+.errorMessage {
+  color: red;
+  font-family: "Chivo";
+  font-size: 1vw;
+  font-weight: lighter;
+  padding: 1%;
+  text-align: right;
 }
