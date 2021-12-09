@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import meetImage from "../../assets/images/meetImage.png";
 import EnquiryForm from "../../components/enquiryForm/enquiryForm";
@@ -18,10 +19,6 @@ const Meet: FC = () => {
     height: "100%",
     backgroundImage: `url(${meetImage})`,
     textDecoration: "none",
-  };
-
-  const downloadNameCard = () => {
-    window.open("https://google.com");
   };
 
   return (
@@ -91,9 +88,14 @@ const Meet: FC = () => {
               </div>
               <div className="nameCard">
                 <h2 className="contactLabel">Name Card:</h2>
-                <div className="btn" onClick={() => downloadNameCard()}>
+                <Link
+                  className="btn"
+                  to="/claystudiosNamecard.jpg"
+                  target="_blank"
+                  download="claystudiosNamecard.jpg"
+                >
                   <span className="noselect">Download</span>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
