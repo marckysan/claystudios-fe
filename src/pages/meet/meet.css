@@ -37,11 +37,11 @@
 
 .map {
   align-self: center;
-  width: 85%;
-  padding-left: 7.5%;
-  height: 75%;
+  width: 60vw;
+  height: 30vw;
   border: 0;
   align-self: center;
+  justify-self: center;
 }
 
 .contact {
@@ -242,4 +242,9 @@ body {
 
 .btn:hover {
   background: #fff;
+}
+
+.socialMediaIcon {
+  width: 5vw !important;
+  height: 5vw !important;
 }
