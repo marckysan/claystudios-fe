@@ -190,6 +190,7 @@ body {
   height: 3vw;
   border: 0.1vw solid #333;
   font-family: "Chivo";
+  color: black;
   font-size: 1.2vw;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -200,6 +201,7 @@ body {
   z-index: 0;
   transition: 1s;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .btn::before,
