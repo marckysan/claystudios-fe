@@ -1,29 +1,35 @@
-import { FC, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { FC } from "react";
 import meetImage from "../../assets/images/meetImage.png";
 import seekImage from "../../assets/images/seekImage.png";
 import usImage from "../../assets/images/usImage.png";
 import yoursImage from "../../assets/images/yoursImage.png";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
-import Loading from "../../components/loading/loading";
 import "./home.css";
 
-const Home: FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
+type AnimationProps = {
+  firstAnimation?: any;
+  secondAnimation?: any;
+  thirdAnimation?: any;
+  fourthAnimation?: any;
+  postAnimation?: any;
+};
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-      console.log(isLoading);
-    }, 5200);
-  }, [isLoading]);
+const DefaultHome: FC<AnimationProps> = (props: AnimationProps) => {
+  const {
+    firstAnimation,
+    secondAnimation,
+    thirdAnimation,
+    fourthAnimation,
+    postAnimation,
+  } = props;
 
   const yoursSectionDiv = {
     width: "100%",
     height: "100%",
     backgroundImage: `url(${yoursImage})`,
     textDecoration: "none",
+    ...firstAnimation,
   };
 
   const seekSectionDiv = {
@@ -31,6 +37,7 @@ const Home: FC = () => {
     height: "100%",
     backgroundImage: `url(${seekImage})`,
     textDecoration: "none",
+    ...secondAnimation,
   };
 
   const usSectionDiv = {
@@ -38,6 +45,7 @@ const Home: FC = () => {
     height: "100%",
     backgroundImage: `url(${usImage})`,
     textDecoration: "none",
+    ...thirdAnimation,
   };
 
   const meetSectionDiv = {
@@ -45,33 +53,32 @@ const Home: FC = () => {
     height: "100%",
     backgroundImage: `url(${meetImage})`,
     textDecoration: "none",
+    ...fourthAnimation,
   };
 
-  return isLoading ? (
-    <Loading />
-  ) : (
+  return (
     <div>
       <Header />
       <div className="homeSection">
-        <div className="yoursContainerHome">
-          <Link to="/yours" style={yoursSectionDiv} className="yoursSection">
+        <div className="yoursContainer">
+          <div style={yoursSectionDiv} className="yoursSection">
             <p className="yoursText">yours</p>
-          </Link>
+          </div>
         </div>
-        <div className="seekContainerHome">
-          <Link to="/seek" style={seekSectionDiv}>
+        <div className="seekContainer">
+          <div style={seekSectionDiv}>
             <p className="seekText">seek</p>
-          </Link>
+          </div>
         </div>
-        <div className="usContainerHome">
-          <Link to="/us" style={usSectionDiv}>
+        <div className="usContainer">
+          <div style={usSectionDiv}>
             <p className="usText">us</p>
-          </Link>
+          </div>
         </div>
-        <div className="meetContainerHome">
-          <Link to="/meet" style={meetSectionDiv}>
+        <div className="meetContainer">
+          <div style={meetSectionDiv}>
             <p className="meetText">meet</p>
-          </Link>
+          </div>
         </div>
       </div>
       <Footer />
@@ -79,4 +86,4 @@ const Home: FC = () => {
   );
 };
 
-export default Home;
+export default DefaultHome;
