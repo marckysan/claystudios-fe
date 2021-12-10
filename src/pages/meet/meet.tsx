@@ -18,10 +18,15 @@ const Meet: FC = () => {
     setTimeout(() => {
       setIsLoading(false);
       console.log(isLoading);
-    }, 5000);
+    }, 3200);
   }, [isLoading]);
 
-  const { ref, inView } = useInView({
+  const [ref, inView] = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
+  const [ref2, inView2] = useInView({
     /* Optional options */
     threshold: 0,
   });
@@ -124,7 +129,7 @@ const Meet: FC = () => {
                 />
                 Let's Meet!
               </h3>
-              <div className="leftArrowDiv">
+              <div className="leftArrowDiv" ref={ref}>
                 <img
                   src={require("../../assets/images/leftArrow.svg").default}
                   alt="Left Arrow"
@@ -134,7 +139,12 @@ const Meet: FC = () => {
                     borderRadius: "0.5vw",
                   }}
                 />
-                <div className="fadingLeftEffect"></div>
+                <div
+                  className="fadingLeftEffect"
+                  style={{
+                    animationPlayState: inView ? "running" : "paused",
+                  }}
+                ></div>
               </div>
             </div>
             <div className="contactContent">
@@ -169,7 +179,7 @@ const Meet: FC = () => {
           <div className="enquiry">
             <div className="enquiryHeader">
               <h3 className="enquiryHeaderWords">Send an Enquiry</h3>
-              <div className="leftArrowDiv" ref={ref}>
+              <div className="leftArrowDiv" ref={ref2}>
                 <img
                   src={require("../../assets/images/leftArrow.svg").default}
                   alt="Left Arrow"
@@ -182,7 +192,7 @@ const Meet: FC = () => {
                 <div
                   className="fadingRightEffect"
                   style={{
-                    animationPlayState: inView ? "running" : "paused",
+                    animationPlayState: inView2 ? "running" : "paused",
                   }}
                 ></div>
               </div>
