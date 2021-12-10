@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import ProgressBar from "../progressBar/progressBar";
+// import ProgressBar from "../progressBar/progressBar";
 
 const Loading: FC = () => {
   const [completed, setCompleted] = useState(0);
@@ -13,28 +13,27 @@ const Loading: FC = () => {
   }, [completed]);
 
   return (
-    // <div className="loadingScreen">
-    <div className="leftSection">
-      <ProgressBar
-        bgcolor={"black"}
-        completed={completed}
-        direction={"vertical"}
-      />
-      {/* <video
-        width="320"
-        height="240"
-        src={require("../../assets/videos/loadingAnimation.mov")}
-        autoPlay
-      /> */}
+    <div className="loadingScreen" style={{ height: "100vh" }}>
       {/* <ProgressBar
         bgcolor={"black"}
         completed={completed}
         direction={"vertical"}
       /> */}
+      <div
+        className="loadingAnimationVideo"
+        style={{
+          marginLeft: "36vw",
+          marginTop: "36vh",
+          height: "100vh",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <video width="40%" muted autoPlay>
+          <source src="videos/loadingAnimation.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
-    //   <div className="middleSection"></div>
-    //   <div className="rightSection"></div>
-    // </div>
   );
 };
 

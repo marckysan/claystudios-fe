@@ -48,9 +48,11 @@ const Home: FC = () => {
   };
 
   return isLoading ? (
-    <Loading />
+    <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }} className="loadingScreenFade">
+      <Loading />
+    </div>
   ) : (
-    <div>
+    <div className="homeFadeIn">
       <Header />
       <div className="homeSection">
         <div className="yoursContainerHome">
