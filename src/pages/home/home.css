@@ -1,3 +1,32 @@
+.loadingScreenFade {
+  animation: loadingFadeOut 0.6s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 4.6s;
+}
+
+@keyframes loadingFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.homeFadeIn {
+  animation: fadeInHomeScreen 0.6s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInHomeScreen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .homeSection {
   width: 100%;
   height: calc(100vh - 28vh);
@@ -13,7 +42,7 @@
   color: white;
   height: 100%;
   width: 90%;
-  margin-top: calc(((100vh - 28vh) / 4) * 3);
+  margin-top: calc((((100vh - 28vh) / 4) * 3) - 3vh);
   font-family: "Chivo";
 }
 
