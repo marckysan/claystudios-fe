@@ -3,45 +3,37 @@
 .yoursContainerMeet {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
-  display: flex;
-  flex-direction: row;
-  align-content: center;
   animation: loadingFade 1s ease;
   animation-fill-mode: forwards;
   overflow: hidden;
+  position: relative;
 }
 
 .seekContainerMeet {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
-  display: flex;
-  flex-direction: row;
-  align-content: center;
   animation: loadingFade 1s ease;
   animation-fill-mode: forwards;
   overflow: hidden;
+  position: relative;
 }
 
 .usContainerMeet {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
-  display: flex;
-  flex-direction: row;
-  align-content: center;
   animation: loadingFade 1s ease;
   animation-fill-mode: forwards;
   overflow: hidden;
+  position: relative;
 }
 
 .meetContainerMeet {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
-  display: flex;
-  flex-direction: row;
-  align-content: center;
   animation: transformation 2s ease;
   animation-fill-mode: forwards;
   overflow: hidden;
+  position: relative;
 }
 
 @keyframes loadingFade {
@@ -77,9 +69,7 @@
 .meetContainer {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
-  display: flex;
-  flex-direction: row;
-  align-content: center;
+  position: relative;
 }
 
 .meetText {

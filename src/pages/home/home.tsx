@@ -1,9 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import meetImage from "../../assets/images/meetImage.png";
-import seekImage from "../../assets/images/seekImage.png";
-import usImage from "../../assets/images/usImage.png";
-import yoursImage from "../../assets/images/yoursImage.png";
+import { useHistory } from "react-router";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
 import Loading from "../../components/loading/loading";
@@ -11,6 +7,7 @@ import "./home.css";
 
 const Home: FC = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const history = useHistory();
 
   useEffect(() => {
     setTimeout(() => {
@@ -19,61 +16,64 @@ const Home: FC = () => {
     }, 5200);
   }, [isLoading]);
 
-  const yoursSectionDiv = {
-    width: "100%",
-    height: "100%",
-    backgroundImage: `url(${yoursImage})`,
-    textDecoration: "none",
+  const redirectYours = () => {
+    history.push("/yours");
   };
 
-  const seekSectionDiv = {
-    width: "100%",
-    height: "100%",
-    backgroundImage: `url(${seekImage})`,
-    textDecoration: "none",
+  const redirectSeek = () => {
+    history.push("/seek");
   };
 
-  const usSectionDiv = {
-    width: "100%",
-    height: "100%",
-    backgroundImage: `url(${usImage})`,
-    textDecoration: "none",
+  const redirectUs = () => {
+    history.push("/us");
   };
 
-  const meetSectionDiv = {
-    width: "100%",
-    height: "100%",
-    backgroundImage: `url(${meetImage})`,
-    textDecoration: "none",
+  const redirectMeet = () => {
+    history.push("/meet");
   };
 
   return isLoading ? (
-    <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }} className="loadingScreenFade">
+    <div
+      style={{ width: "100vw", height: "100vh", overflow: "hidden" }}
+      className="loadingScreenFade"
+    >
       <Loading />
     </div>
   ) : (
     <div className="homeFadeIn">
       <Header />
       <div className="homeSection">
-        <div className="yoursContainerHome">
-          <Link to="/yours" style={yoursSectionDiv} className="yoursSection">
-            <p className="yoursText">yours</p>
-          </Link>
+        <div className="yoursContainerHome" onClick={redirectYours}>
+          <img
+            className="yoursImageHome"
+            src={require("../../assets/images/yoursImage.png").default}
+            alt="yoursImage"
+          />
+          <p className="yoursText">yours</p>
         </div>
-        <div className="seekContainerHome">
-          <Link to="/seek" style={seekSectionDiv}>
-            <p className="seekText">seek</p>
-          </Link>
+        <div className="seekContainerHome" onClick={redirectSeek}>
+          <img
+            className="seekImageHome"
+            src={require("../../assets/images/seekImage.png").default}
+            alt="seekImage"
+          />
+          <p className="seekText">seek</p>
         </div>
-        <div className="usContainerHome">
-          <Link to="/us" style={usSectionDiv}>
-            <p className="usText">us</p>
-          </Link>
+        <div className="usContainerHome" onClick={redirectUs}>
+          <img
+            className="usImageHome"
+            src={require("../../assets/images/usImage.png").default}
+            alt="usImage"
+          />
+          <p className="usText">us</p>
         </div>
-        <div className="meetContainerHome">
-          <Link to="/meet" style={meetSectionDiv}>
-            <p className="meetText">meet</p>
-          </Link>
+        <div className="meetContainerHome" onClick={redirectMeet}>
+          <img
+            className="meetImageHome"
+            src={require("../../assets/images/meetImage.png").default}
+            alt="meetImage"
+          />
+          <p className="meetText">meet</p>
         </div>
       </div>
       <Footer />
