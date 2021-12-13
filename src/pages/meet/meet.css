@@ -157,7 +157,7 @@
 .fadingLeftEffect {
   position: relative;
   width: 100%;
-  height: 1.6vw;
+  height: 1.7vw;
   z-index: 4vw !important;
   margin-top: -1.9vw;
   background-color: white;
@@ -178,7 +178,7 @@
 .fadingRightEffect {
   position: relative;
   width: 100%;
-  height: 1.5vw;
+  height: 1.7vw;
   z-index: 4vw !important;
   margin-top: -1.9vw;
   background-color: white;
@@ -298,13 +298,13 @@ body {
 }
 
 .btn::before {
-  height: 0.1vw;
-  width: 0.5vw;
+  height: 2vw;
+  width: 8vw;
 }
 
 .btn::after {
-  width: 150px;
-  height: 30px;
+  width: 8vw;
+  height: 2vw;
 }
 
 .noselect {
