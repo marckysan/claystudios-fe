@@ -40,70 +40,94 @@
   writing-mode: vertical-rl;
   font-size: 3.3vw;
   color: white;
-  height: 100%;
-  width: 90%;
   margin-top: calc((((100vh - 28vh) / 4) * 3) - 3vh);
+  margin-left: 85%;
   font-family: "Chivo";
+  position: absolute;
+  z-index: 100vw !important;
 }
 
 .seekText {
   writing-mode: vertical-rl;
   font-size: 3.3vw;
   color: white;
-  height: 100%;
-  width: 90%;
   margin-top: calc(((100vh - 28vh) / 4) * 2);
+  margin-left: 85%;
   font-family: "Chivo";
+  position: absolute;
+  z-index: 100vw !important;
 }
 
 .usText {
   writing-mode: vertical-rl;
   font-size: 3.3vw;
   color: white;
-  height: 100%;
-  width: 90%;
   margin-top: calc(((100vh - 28vh) / 4) + 2vh);
+  margin-left: 85%;
   font-family: "Chivo";
+  position: absolute;
+  z-index: 100vw !important;
 }
 
 .meetText {
   writing-mode: vertical-rl;
   font-size: 3.3vw;
   color: white;
-  height: 100%;
-  width: 90%;
   margin-top: calc(((100vh - 28vh) / 4) / 5);
+  margin-left: 10%;
   font-family: "Chivo";
+  position: absolute;
+  z-index: 100vw !important;
 }
 
 .yoursContainerHome {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
-  display: flex;
-  flex-direction: row;
-  align-content: center;
+  position: relative;
+}
+
+.yoursImageHome {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0vw !important;
 }
 
 .seekContainerHome {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
-  display: flex;
-  flex-direction: row;
-  align-content: center;
+  position: relative;
+}
+
+.seekImageHome {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0vw !important;
 }
 
 .usContainerHome {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
-  display: flex;
-  flex-direction: row;
-  align-content: center;
+  position: relative;
+}
+
+.usImageHome {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0vw !important;
 }
 
 .meetContainerHome {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
-  display: flex;
-  flex-direction: row;
-  align-content: center;
+  position: relative;
+}
+
+.meetImageHome {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0vw !important;
 }
