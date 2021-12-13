@@ -94,86 +94,99 @@ const Meet: FC = () => {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="contact">
-            <div className="contactHeader">
-              <h3 className="contactHeaderWords">
-                <SocialIcon
-                  url="https://www.instagram.com/claystudios_sg/"
-                  bgColor="white"
-                  fgColor="black"
-                  className="socialMediaIcon"
-                />
-                Let's Meet!
-              </h3>
-              <div className="leftArrowDiv" ref={ref}>
-                <img
-                  src={require("../../assets/images/leftArrow.svg").default}
-                  alt="Left Arrow"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "0.5vw",
-                  }}
-                />
-                <div
-                  className="fadingLeftEffect"
-                  style={{
-                    animationPlayState: inView ? "running" : "paused",
-                  }}
-                ></div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+            <div className="contact">
+              <div className="contactHeader">
+                <h3 className="contactHeaderWords">
+                  <SocialIcon
+                    url="https://www.instagram.com/claystudios_sg/"
+                    bgColor="white"
+                    fgColor="black"
+                    className="socialMediaIcon"
+                  />
+                  Let's Meet!
+                </h3>
+                <div className="leftArrowDiv" ref={ref}>
+                  <img
+                    className="leftArrow"
+                    src={require("../../assets/images/leftArrow.svg").default}
+                    alt="Left Arrow"
+                  />
+                  <div
+                    className="fadingLeftEffect"
+                    style={{
+                      animationPlayState: inView ? "running" : "paused",
+                    }}
+                  ></div>
+                </div>
               </div>
-            </div>
-            <div className="contactContent">
-              <div className="office">
-                <h2 className="contactLabel">Office:</h2>
-                <p className="contactText">
-                  3027 Ubi Road 1, #04-122,
-                  <br /> Kampong Ubi Industrial Estate <br />
-                  Singapore
-                </p>
-              </div>
-              <div className="call">
-                <h2 className="contactLabel">Call:</h2>
-                <p className="contactText">
-                  +65 9866 2341 (M) <br />
-                  +65 6635 2166 (O)
-                </p>
-              </div>
-              <div className="nameCard">
-                <h2 className="contactLabel">Name Card:</h2>
-                <Link
-                  className="btn"
-                  to="/claystudiosNamecard.jpg"
-                  target="_blank"
-                  download="claystudiosNamecard.jpg"
-                >
-                  <span className="noselect">Download</span>
-                </Link>
+              <div className="contactContent">
+                <div className="office">
+                  <h2 className="contactLabel">Office:</h2>
+                  <p className="contactText">
+                    3027 Ubi Road 1, #04-122,
+                    <br /> Kampong Ubi Industrial Estate <br />
+                    Singapore
+                  </p>
+                </div>
+                <div className="call">
+                  <h2 className="contactLabel">Call:</h2>
+                  <p className="contactText">
+                    +65 9866 2341 (M) <br />
+                    +65 6635 2166 (O)
+                  </p>
+                </div>
+                <div className="nameCard">
+                  <h2 className="contactLabel">Name Card:</h2>
+                  <Link
+                    className="btn"
+                    to="/claystudiosNamecard.jpg"
+                    target="_blank"
+                    download="claystudiosNamecard.jpg"
+                  >
+                    <span className="noselect">Download</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-          <div className="enquiry">
-            <div className="enquiryHeader">
-              <h3 className="enquiryHeaderWords">Send an Enquiry</h3>
-              <div className="leftArrowDiv" ref={ref2}>
-                <img
-                  src={require("../../assets/images/leftArrow.svg").default}
-                  alt="Left Arrow"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    transform: "rotate(180deg)",
-                  }}
-                />
-                <div
-                  className="fadingRightEffect"
-                  style={{
-                    animationPlayState: inView2 ? "running" : "paused",
-                  }}
-                ></div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+            <div className="enquiry">
+              <div className="enquiryHeader">
+                <h3 className="enquiryHeaderWords">Send an Enquiry</h3>
+                <div className="leftArrowDiv" ref={ref2}>
+                  <img
+                    className="leftArrow"
+                    src={require("../../assets/images/leftArrow.svg").default}
+                    alt="Left Arrow"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      transform: "rotate(180deg)",
+                    }}
+                  />
+                  <div
+                    className="fadingRightEffect"
+                    style={{
+                      animationPlayState: inView2 ? "running" : "paused",
+                    }}
+                  ></div>
+                </div>
               </div>
+              <EnquiryForm></EnquiryForm>
             </div>
-            <EnquiryForm></EnquiryForm>
           </div>
         </div>
       </div>
