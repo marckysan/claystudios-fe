@@ -64,10 +64,10 @@ select:focus {
 }
 
 .checkBoxDescription {
-  font-size: 1vw;
+  font-size: 1.1vw;
   font-family: "Chivo";
   font-weight: lighter;
-  text-align: justify;
+  line-height: 10%;
 }
 
 .submitBtn {

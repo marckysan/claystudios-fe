@@ -85,7 +85,6 @@
 .rightSection {
   width: calc((300vw / 4));
   height: calc(100vh - 28vh);
-  align-items: center;
   overflow-y: scroll;
   overflow-x: hidden;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -120,13 +119,11 @@
 .contact {
   display: flex;
   flex-direction: column;
-  width: 85%;
-  padding-left: 7.5%;
-  align-items: center;
+  width: 60vw;
 }
 
 .contactHeader {
-  width: 100%;
+  width: inherit;
   display: flex;
   flex-direction: column;
 }
@@ -141,6 +138,20 @@
 
 .leftArrowDiv {
   margin-top: -2.5vw;
+  width: inherit;
+}
+
+.leftArrow {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 1190px) {
+  .leftArrow {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .fadingLeftEffect {
@@ -220,8 +231,7 @@
 .enquiry {
   display: flex;
   flex-direction: column;
-  width: 85%;
-  padding-left: 7.5%;
+  width: 60vw;
   align-items: center;
 }
 
@@ -229,6 +239,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 3%;
 }
 
 .enquiryHeaderWords {

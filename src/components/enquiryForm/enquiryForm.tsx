@@ -147,7 +147,7 @@ const EnquiryForm: FC = () => {
                 type="checkbox"
                 id="fieldSubscribe"
                 value="false"
-                style={{ marginRight: "1vw" }}
+                style={{ marginRight: "1vw", width: "1vw", height: "1vw" }}
                 onChange={updateValues("isAgreed")}
               />
               By checking this box and submitting your information, you are
