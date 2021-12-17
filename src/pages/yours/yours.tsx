@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import { Col, Container, Row } from "react-grid-system";
+import { useHistory } from "react-router";
 import punggolWalk from "../../assets/images/308PunggolWalk.png";
 import domain21 from "../../assets/images/domain21.png";
 import floralvale from "../../assets/images/floralvale.png";
@@ -13,15 +14,23 @@ import "./yours.css";
 
 const Yours: FC = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isClicked, setIsClicked] = useState(false);
   const { width } = useWindowDimensions();
-
-  console.log(width);
+  const history = useHistory();
 
   useEffect(() => {
+    document.title = "yours";
     setTimeout(() => {
       setIsLoading(false);
     }, 1000);
   }, [isLoading]);
+
+  const redirect = (link: string) => {
+    setIsClicked(true);
+    setTimeout(() => {
+      history.push(`/yours/${link}`);
+    }, 800);
+  };
 
   return isLoading ? (
     <div
@@ -80,7 +89,17 @@ const Yours: FC = () => {
           />
           <p className="yoursText">yours</p>
         </div>
-        <div className="rightSection">
+        <div
+          className="rightSection"
+          style={
+            isClicked
+              ? {
+                  animation: "rightSectionFadeOut 0.8s ease",
+                  animationFillMode: "forwards",
+                }
+              : {}
+          }
+        >
           <Container fluid style={{ paddingBottom: "3vw" }}>
             {width > 1000 ? (
               <div>
@@ -92,11 +111,11 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("vibesAtEastCoast")}
                   >
                     <ProjectCard
                       img={vibesAtEastCoast}
                       name="Vibes @ East Coast"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                   <Col
@@ -106,11 +125,11 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("floralvale")}
                   >
                     <ProjectCard
                       img={floralvale}
                       name="The Floralvale"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                   <Col
@@ -120,11 +139,11 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("tamanSelamat")}
                   >
                     <ProjectCard
                       img={tamanSelamat}
                       name="Taman Selamat"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                 </Row>
@@ -137,12 +156,9 @@ const Yours: FC = () => {
                       background: "white",
                       paddingLeft: "10%",
                     }}
+                    onClick={() => redirect("domain21")}
                   >
-                    <ProjectCard
-                      img={domain21}
-                      name="Domain 21"
-                      link="/"
-                    ></ProjectCard>
+                    <ProjectCard img={domain21} name="Domain 21"></ProjectCard>
                   </Col>
                   <Col
                     debug
@@ -151,11 +167,11 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("308BPunggolWalk")}
                   >
                     <ProjectCard
                       img={punggolWalk}
                       name="308B Punggol Walk"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                 </Row>
@@ -170,11 +186,11 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("vibesAtEastCoast")}
                   >
                     <ProjectCard
                       img={vibesAtEastCoast}
                       name="Vibes @ East Coast"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                   <Col
@@ -184,11 +200,11 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("floralvale")}
                   >
                     <ProjectCard
                       img={floralvale}
                       name="The Floralvale"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                 </Row>
@@ -200,11 +216,11 @@ const Yours: FC = () => {
                       outline: "none",
                       background: "white",
                     }}
+                    onClick={() => redirect("tamanSelamat")}
                   >
                     <ProjectCard
                       img={tamanSelamat}
                       name="Taman Selamat"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                   <Col
@@ -214,12 +230,9 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("domain21")}
                   >
-                    <ProjectCard
-                      img={domain21}
-                      name="Domain 21"
-                      link="/"
-                    ></ProjectCard>
+                    <ProjectCard img={domain21} name="Domain 21"></ProjectCard>
                   </Col>
                 </Row>
                 <Row
@@ -236,11 +249,11 @@ const Yours: FC = () => {
                       background: "white",
                       paddingLeft: "30%",
                     }}
+                    onClick={() => redirect("308BPunggolWalk")}
                   >
                     <ProjectCard
                       img={punggolWalk}
                       name="308B Punggol Walk"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                 </Row>
@@ -255,11 +268,11 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("vibesAtEastCoast")}
                   >
                     <ProjectCard
                       img={vibesAtEastCoast}
                       name="Vibes @ East Coast"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                 </Row>
@@ -277,11 +290,11 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("floralvale")}
                   >
                     <ProjectCard
                       img={floralvale}
                       name="The Floralvale"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                 </Row>
@@ -299,11 +312,11 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("tamanSelamat")}
                   >
                     <ProjectCard
                       img={tamanSelamat}
                       name="Taman Selamat"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                 </Row>
@@ -321,12 +334,9 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("domain21")}
                   >
-                    <ProjectCard
-                      img={domain21}
-                      name="Domain 21"
-                      link="/"
-                    ></ProjectCard>
+                    <ProjectCard img={domain21} name="Domain 21"></ProjectCard>
                   </Col>
                 </Row>
                 <Row
@@ -343,11 +353,11 @@ const Yours: FC = () => {
                       background: "white",
                       justifyContent: "center",
                     }}
+                    onClick={() => redirect("308BPunggolWalk")}
                   >
                     <ProjectCard
                       img={punggolWalk}
                       name="308B Punggol Walk"
-                      link="/"
                     ></ProjectCard>
                   </Col>
                 </Row>

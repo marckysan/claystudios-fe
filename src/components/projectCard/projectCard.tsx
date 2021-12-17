@@ -4,7 +4,6 @@ import "./projectCard.css";
 type Props = {
   img: string;
   name: string;
-  link: string;
 };
 
 const ProjectCard: FC<Props> = (props: Props) => {

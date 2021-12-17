@@ -71,3 +71,12 @@
     opacity: 1;
   }
 }
+
+@keyframes rightSectionFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,11 +1,15 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import usImage from "../../assets/images/usImage.png";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
-import "./us.css";
 import Team from "../../components/team/team";
+import "./us.css";
 
 const Us: FC = () => {
+  useEffect(() => {
+    document.title = "us";
+  }, []);
+
   const usSectionDiv = {
     width: "100%",
     height: "100%",
