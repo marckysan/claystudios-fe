@@ -7,6 +7,10 @@ import "./home.css";
 
 const Home: FC = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isYoursClicked, setIsYoursClicked] = useState(false);
+  const [isSeekClicked, setIsSeekClicked] = useState(false);
+  const [isUsClicked, setIsUsClicked] = useState(false);
+  const [isMeetClicked, setIsMeetClicked] = useState(false);
   const history = useHistory();
 
   useEffect(() => {
@@ -17,19 +21,31 @@ const Home: FC = () => {
   }, [isLoading]);
 
   const redirectYours = () => {
-    history.push("/yours");
+    setIsYoursClicked(true);
+    setTimeout(() => {
+      history.push("/yours");
+    }, 1000);
   };
 
   const redirectSeek = () => {
-    history.push("/seek");
+    setIsSeekClicked(true);
+    setTimeout(() => {
+      history.push("/seek");
+    }, 1000);
   };
 
   const redirectUs = () => {
-    history.push("/us");
+    setIsUsClicked(true);
+    setTimeout(() => {
+      history.push("/us");
+    }, 1000);
   };
 
   const redirectMeet = () => {
-    history.push("/meet");
+    setIsMeetClicked(true);
+    setTimeout(() => {
+      history.push("/meet");
+    }, 1000);
   };
 
   return isLoading ? (
@@ -45,7 +61,9 @@ const Home: FC = () => {
       <div className="homeSection">
         <div className="yoursContainerHome" onClick={redirectYours}>
           <img
-            className="yoursImageHome"
+            className={
+              isYoursClicked ? "yoursImageHomeAfterClick" : "yoursImageHome"
+            }
             src={require("../../assets/images/yoursImage.png").default}
             alt="yoursImage"
           />
@@ -53,7 +71,9 @@ const Home: FC = () => {
         </div>
         <div className="seekContainerHome" onClick={redirectSeek}>
           <img
-            className="seekImageHome"
+            className={
+              isSeekClicked ? "seekImageHomeAfterClick" : "seekImageHome"
+            }
             src={require("../../assets/images/seekImage.png").default}
             alt="seekImage"
           />
@@ -61,7 +81,7 @@ const Home: FC = () => {
         </div>
         <div className="usContainerHome" onClick={redirectUs}>
           <img
-            className="usImageHome"
+            className={isUsClicked ? "usImageHomeAfterClick" : "usImageHome"}
             src={require("../../assets/images/usImage.png").default}
             alt="usImage"
           />
@@ -69,7 +89,9 @@ const Home: FC = () => {
         </div>
         <div className="meetContainerHome" onClick={redirectMeet}>
           <img
-            className="meetImageHome"
+            className={
+              isMeetClicked ? "meetImageHomeAfterClick" : "meetImageHome"
+            }
             src={require("../../assets/images/meetImage.png").default}
             alt="meetImage"
           />
