@@ -84,6 +84,7 @@
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
   position: relative;
+  overflow: hidden;
 }
 
 .yoursImageHome {
@@ -91,12 +92,26 @@
   height: 100%;
   position: absolute;
   z-index: 0vw !important;
+  transition: transform 1s ease;
+}
+
+.yoursContainerHome:hover > .yoursImageHome {
+  transform: scale(1.3);
+}
+
+.yoursImageHomeAfterClick {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0vw !important;
+  animation: afterClick 1s ease;
 }
 
 .seekContainerHome {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
   position: relative;
+  overflow: hidden;
 }
 
 .seekImageHome {
@@ -104,12 +119,26 @@
   height: 100%;
   position: absolute;
   z-index: 0vw !important;
+  transition: transform 1s ease;
+}
+
+.seekContainerHome:hover > .seekImageHome {
+  transform: scale(1.3);
+}
+
+.seekImageHomeAfterClick {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0vw !important;
+  animation: afterClick 1s ease;
 }
 
 .usContainerHome {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
   position: relative;
+  overflow: hidden;
 }
 
 .usImageHome {
@@ -117,12 +146,26 @@
   height: 100%;
   position: absolute;
   z-index: 0vw !important;
+  transition: transform 1s ease;
+}
+
+.usContainerHome:hover > .usImageHome {
+  transform: scale(1.3);
+}
+
+.usImageHomeAfterClick {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0vw !important;
+  animation: afterClick 1s ease;
 }
 
 .meetContainerHome {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
   position: relative;
+  overflow: hidden;
 }
 
 .meetImageHome {
@@ -130,4 +173,26 @@
   height: 100%;
   position: absolute;
   z-index: 0vw !important;
+  transition: transform 1s ease;
+}
+
+.meetContainerHome:hover > .meetImageHome {
+  transform: scale(1.3);
+}
+
+.meetImageHomeAfterClick {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0vw !important;
+  animation: afterClick 1s ease;
+}
+
+@keyframes afterClick {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale (1);
+  }
 }
