@@ -4,6 +4,7 @@ import "./projectCard.css";
 type Props = {
   img: string;
   name: string;
+  link: string;
 };
 
 const ProjectCard: FC<Props> = (props: Props) => {
@@ -15,13 +16,12 @@ const ProjectCard: FC<Props> = (props: Props) => {
         borderRadius: "4px",
         display: "flex",
         flexDirection: "column",
-        paddingTop: "3%",
+        paddingTop: "8%",
         paddingBottom: "3%",
         paddingLeft: "2%",
         paddingRight: "2%",
-        width: "15vw",
-        height: "18vw",
-        position: "absolute",
+        width: "18vw",
+        height: "24vw",
       }}
     >
       <div
@@ -29,11 +29,10 @@ const ProjectCard: FC<Props> = (props: Props) => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
-          position: "relative",
         }}
       >
         <img
-          style={{ width: "14vw", height: "16vw" }}
+          style={{ width: "16vw", height: "20vw", borderRadius: "1px" }}
           src={props.img}
           alt="projectImage"
         />
@@ -43,7 +42,7 @@ const ProjectCard: FC<Props> = (props: Props) => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
-          position: "relative",
+          alignItems: "flex-start",
         }}
       >
         <h2 className="cardText">{props.name}</h2>
