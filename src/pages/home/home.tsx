@@ -14,6 +14,7 @@ const Home: FC = () => {
   const history = useHistory();
 
   useEffect(() => {
+    document.title = "home";
     setTimeout(() => {
       setIsLoading(false);
       console.log(isLoading);

@@ -11,6 +11,7 @@ const Meet: FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "meet";
     setTimeout(() => {
       setIsLoading(false);
       console.log(isLoading);
