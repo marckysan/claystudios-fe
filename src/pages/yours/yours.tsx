@@ -100,7 +100,7 @@ const Yours: FC = () => {
               : {}
           }
         >
-          <Container fluid style={{ paddingBottom: "3vw" }}>
+          <Container fluid style={{ paddingBottom: "3vw", paddingTop: "1vw" }}>
             {width > 1000 ? (
               <div>
                 <Row debug align="center" justify="center" direction="row">
