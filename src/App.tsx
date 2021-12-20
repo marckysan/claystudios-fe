@@ -11,6 +11,7 @@ import YoursFloralvale from "./pages/yoursFloralvale/yoursFloralvale";
 import YoursPunggol from "./pages/yoursPunggol/yoursPunggol";
 import YoursTaman from "./pages/yoursTaman/yoursTaman";
 import YoursVibes from "./pages/yoursVibes/yoursVibes";
+import YoursWaterfrontGold from './pages/yoursWaterfrontGold/yoursWaterfrontGold';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
       </Route>
       <Route exact path="/yours/308BPunggolWalk">
         <YoursPunggol />
+      </Route>
+      <Route exact path="/yours/waterfrontGold">
+        <YoursWaterfrontGold />
       </Route>
       <Route exact path="/seek">
         <Seek />

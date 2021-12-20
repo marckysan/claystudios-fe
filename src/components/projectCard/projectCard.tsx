@@ -12,15 +12,17 @@ const ProjectCard: FC<Props> = (props: Props) => {
       style={{
         background: "#ffffff",
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-        borderRadius: "4px",
+        borderRadius: "1px",
         display: "flex",
         flexDirection: "column",
-        paddingTop: "8%",
+        paddingTop: "2vw",
         paddingBottom: "3%",
         paddingLeft: "2%",
         paddingRight: "2%",
         width: "18vw",
         height: "24vw",
+        alignSelf: "center",
+        justifySelf: "center",
       }}
     >
       <div
