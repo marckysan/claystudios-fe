@@ -1,11 +1,12 @@
 import React, { FC, useEffect, useState } from "react";
-import { Col, Container, Row } from "react-grid-system";
 import { useHistory } from "react-router";
+import StackGrid from "react-stack-grid";
 import punggolWalk from "../../assets/images/308PunggolWalk.png";
 import domain21 from "../../assets/images/domain21.png";
 import floralvale from "../../assets/images/floralvale.png";
 import tamanSelamat from "../../assets/images/tamanSelamat.png";
 import vibesAtEastCoast from "../../assets/images/vibesAtEastCoast.png";
+import waterfrontGold from "../../assets/images/waterfrontGold.png";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
 import ProjectCard from "../../components/projectCard/projectCard";
@@ -17,6 +18,19 @@ const Yours: FC = () => {
   const [isClicked, setIsClicked] = useState(false);
   const { width } = useWindowDimensions();
   const history = useHistory();
+
+  const items = [
+    {
+      img: vibesAtEastCoast,
+      name: "Vibes @ East Coast",
+      link: "vibesAtEastCoast",
+    },
+    { img: floralvale, name: "The Floralvale", link: "floralvale" },
+    { img: tamanSelamat, name: "Taman Selamat", link: "tamanSelamat" },
+    { img: domain21, name: "Domain 21", link: "domain21" },
+    { img: punggolWalk, name: "308B Punggol Walk", link: "308BPunggolWalk" },
+    { img: waterfrontGold, name: "Waterfront Gold", link: "waterfrontGold" },
+  ];
 
   useEffect(() => {
     document.title = "yours";
@@ -100,270 +114,35 @@ const Yours: FC = () => {
               : {}
           }
         >
-          <Container fluid style={{ paddingBottom: "3vw", paddingTop: "1vw" }}>
-            {width > 1000 ? (
-              <div>
-                <Row debug align="center" justify="center" direction="row">
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("vibesAtEastCoast")}
-                  >
-                    <ProjectCard
-                      img={vibesAtEastCoast}
-                      name="Vibes @ East Coast"
-                    ></ProjectCard>
-                  </Col>
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("floralvale")}
-                  >
-                    <ProjectCard
-                      img={floralvale}
-                      name="The Floralvale"
-                    ></ProjectCard>
-                  </Col>
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("tamanSelamat")}
-                  >
-                    <ProjectCard
-                      img={tamanSelamat}
-                      name="Taman Selamat"
-                    ></ProjectCard>
-                  </Col>
-                </Row>
-                <br />
-                <Row debug align="center" justify="center" direction="row">
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      paddingLeft: "10%",
-                    }}
-                    onClick={() => redirect("domain21")}
-                  >
-                    <ProjectCard img={domain21} name="Domain 21"></ProjectCard>
-                  </Col>
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("308BPunggolWalk")}
-                  >
-                    <ProjectCard
-                      img={punggolWalk}
-                      name="308B Punggol Walk"
-                    ></ProjectCard>
-                  </Col>
-                </Row>
+          <StackGrid
+            columnWidth={
+              width <= 667 && width > 320
+                ? "50%"
+                : width <= 320
+                ? "80%"
+                : "33.33%"
+            }
+            gutterHeight={10}
+            style={{
+              width: "80%",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {items.map(({ img, name, link }, key) => (
+              <div
+                key={key}
+                onClick={() => redirect(link)}
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                }}
+              >
+                <ProjectCard img={img} name={name} />
               </div>
-            ) : width < 1000 && width > 667 ? (
-              <div>
-                <Row debug align="center" justify="center" direction="row">
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("vibesAtEastCoast")}
-                  >
-                    <ProjectCard
-                      img={vibesAtEastCoast}
-                      name="Vibes @ East Coast"
-                    ></ProjectCard>
-                  </Col>
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("floralvale")}
-                  >
-                    <ProjectCard
-                      img={floralvale}
-                      name="The Floralvale"
-                    ></ProjectCard>
-                  </Col>
-                </Row>
-                <br />
-                <Row debug align="center" justify="center" direction="row">
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                    }}
-                    onClick={() => redirect("tamanSelamat")}
-                  >
-                    <ProjectCard
-                      img={tamanSelamat}
-                      name="Taman Selamat"
-                    ></ProjectCard>
-                  </Col>
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("domain21")}
-                  >
-                    <ProjectCard img={domain21} name="Domain 21"></ProjectCard>
-                  </Col>
-                </Row>
-                <Row
-                  debug
-                  align="center"
-                  justify="center"
-                  direction="row"
-                  style={{ marginTop: "2vw" }}
-                >
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      paddingLeft: "30%",
-                    }}
-                    onClick={() => redirect("308BPunggolWalk")}
-                  >
-                    <ProjectCard
-                      img={punggolWalk}
-                      name="308B Punggol Walk"
-                    ></ProjectCard>
-                  </Col>
-                </Row>
-              </div>
-            ) : (
-              <div>
-                <Row debug align="center" justify="center" direction="row">
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("vibesAtEastCoast")}
-                  >
-                    <ProjectCard
-                      img={vibesAtEastCoast}
-                      name="Vibes @ East Coast"
-                    ></ProjectCard>
-                  </Col>
-                </Row>
-                <Row
-                  debug
-                  align="center"
-                  justify="center"
-                  direction="row"
-                  style={{ marginTop: "2vw" }}
-                >
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("floralvale")}
-                  >
-                    <ProjectCard
-                      img={floralvale}
-                      name="The Floralvale"
-                    ></ProjectCard>
-                  </Col>
-                </Row>
-                <Row
-                  debug
-                  align="center"
-                  justify="center"
-                  direction="row"
-                  style={{ marginTop: "2vw" }}
-                >
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("tamanSelamat")}
-                  >
-                    <ProjectCard
-                      img={tamanSelamat}
-                      name="Taman Selamat"
-                    ></ProjectCard>
-                  </Col>
-                </Row>
-                <Row
-                  debug
-                  align="center"
-                  justify="center"
-                  direction="row"
-                  style={{ marginTop: "2vw" }}
-                >
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("domain21")}
-                  >
-                    <ProjectCard img={domain21} name="Domain 21"></ProjectCard>
-                  </Col>
-                </Row>
-                <Row
-                  debug
-                  align="center"
-                  justify="center"
-                  direction="row"
-                  style={{ marginTop: "2vw" }}
-                >
-                  <Col
-                    debug
-                    style={{
-                      outline: "none",
-                      background: "white",
-                      justifyContent: "center",
-                    }}
-                    onClick={() => redirect("308BPunggolWalk")}
-                  >
-                    <ProjectCard
-                      img={punggolWalk}
-                      name="308B Punggol Walk"
-                    ></ProjectCard>
-                  </Col>
-                </Row>
-              </div>
-            )}
-          </Container>
+            ))}
+          </StackGrid>
         </div>
       </div>
       <Footer />

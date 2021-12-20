@@ -3,23 +3,4 @@
   font-family: "Chivo";
   font-weight: lighter;
   text-align: center;
-  margin-top: -0.1vw;
-}
-
-@media (max-width: 667px) {
-  .cardText {
-    font-size: 1.65vw;
-    font-family: "Chivo";
-    font-weight: lighter;
-    margin-top: -1.2vw;
-  }
-}
-
-@media (max-width: 345px) {
-  .cardText {
-    font-size: 1.65vw;
-    font-family: "Chivo";
-    font-weight: lighter;
-    margin-top: -3vw;
-  }
 }
