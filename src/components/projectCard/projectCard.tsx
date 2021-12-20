@@ -8,23 +8,7 @@ type Props = {
 
 const ProjectCard: FC<Props> = (props: Props) => {
   return (
-    <div
-      style={{
-        background: "#ffffff",
-        boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-        borderRadius: "1px",
-        display: "flex",
-        flexDirection: "column",
-        paddingTop: "2vw",
-        paddingBottom: "3%",
-        paddingLeft: "2%",
-        paddingRight: "2%",
-        width: "18vw",
-        height: "24vw",
-        alignSelf: "center",
-        justifySelf: "center",
-      }}
-    >
+    <div className="projectCard">
       <div
         style={{
           display: "flex",
@@ -32,11 +16,7 @@ const ProjectCard: FC<Props> = (props: Props) => {
           justifyContent: "center",
         }}
       >
-        <img
-          style={{ width: "16vw", height: "20vw", borderRadius: "1px" }}
-          src={props.img}
-          alt="projectImage"
-        />
+        <img className="cardImage" src={props.img} alt="projectImage" />
       </div>
       <div
         style={{
