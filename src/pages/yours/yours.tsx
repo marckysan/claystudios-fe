@@ -142,6 +142,7 @@ const Yours: FC = () => {
                 <ProjectCard img={img} name={name} />
               </div>
             ))}
+            <div style={{ height: "1vw" }}></div>
           </StackGrid>
         </div>
       </div>
