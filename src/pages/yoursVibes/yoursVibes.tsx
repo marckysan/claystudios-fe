@@ -1,21 +1,114 @@
 import React, { FC } from "react";
-import StackGrid from "react-stack-grid";
+import Gallery from "react-grid-gallery";
+import vibes1 from "../../assets/images/vibesAtEastCoast/vibes1.jpg";
+import vibes10 from "../../assets/images/vibesAtEastCoast/vibes10.jpg";
+import vibes11 from "../../assets/images/vibesAtEastCoast/vibes11.jpg";
+import vibes12 from "../../assets/images/vibesAtEastCoast/vibes12.jpg";
+import vibes13 from "../../assets/images/vibesAtEastCoast/vibes13.jpg";
+import vibes14 from "../../assets/images/vibesAtEastCoast/vibes14.jpg";
+import vibes15 from "../../assets/images/vibesAtEastCoast/vibes15.jpg";
+import vibes16 from "../../assets/images/vibesAtEastCoast/vibes16.jpg";
+import vibes17 from "../../assets/images/vibesAtEastCoast/vibes17.jpg";
+import vibes18 from "../../assets/images/vibesAtEastCoast/vibes18.jpg";
+import vibes2 from "../../assets/images/vibesAtEastCoast/vibes2.jpg";
+import vibes3 from "../../assets/images/vibesAtEastCoast/vibes3.jpg";
+import vibes4 from "../../assets/images/vibesAtEastCoast/vibes4.jpg";
+import vibes5 from "../../assets/images/vibesAtEastCoast/vibes5.jpg";
+import vibes6 from "../../assets/images/vibesAtEastCoast/vibes6.jpg";
+import vibes7 from "../../assets/images/vibesAtEastCoast/vibes7.jpg";
+import vibes8 from "../../assets/images/vibesAtEastCoast/vibes8.jpg";
+import vibes9 from "../../assets/images/vibesAtEastCoast/vibes9.jpg";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
-import useWindowDimensions from "../../utils/viewportDimensions/useWindowDimensions";
 import "./yoursVibes.css";
 
 const YoursVibes: FC = () => {
-  const { width } = useWindowDimensions();
   const items = [
     {
-      img: "https://fiverr-res.cloudinary.com/image/upload/t_portfolio_project_large,q_auto,f_auto/v1/attachments/portfolio_project/item/fb2c3b4c11b074fd106b813a59e28928/grafika_01.jpg",
+      src: vibes1,
+      thumbnail: vibes1,
     },
     {
-      img: "https://fiverr-res.cloudinary.com/image/upload/t_portfolio_project_large,q_auto,f_auto/v1/attachments/portfolio_project/item/e00e49b37a234f981cca7da24ea91b3c/cover-01-01.png",
+      src: vibes2,
+      thumbnail: vibes2,
     },
     {
-      img: "https://fiverr-res.cloudinary.com/image/upload/t_portfolio_project_large,q_auto,f_auto/v1/attachments/portfolio_project/item/1fb148ca00b15989a61fc3479932b339/cover-01-02.png",
+      src: vibes3,
+      thumbnail: vibes3,
+      thumbnailWidth: 180,
+      thumbnailHeight: 150,
+    },
+    {
+      src: vibes4,
+      thumbnail: vibes4,
+      thumbnailWidth: 180,
+      thumbnailHeight: 150,
+    },
+    {
+      src: vibes5,
+      thumbnail: vibes5,
+    },
+    {
+      src: vibes6,
+      thumbnail: vibes6,
+      thumbnailWidth: 180,
+      thumbnailHeight: 150,
+    },
+    {
+      src: vibes7,
+      thumbnail: vibes7,
+    },
+    {
+      src: vibes8,
+      thumbnail: vibes8,
+    },
+    {
+      src: vibes9,
+      thumbnail: vibes9,
+      thumbnailWidth: 180,
+      thumbnailHeight: 150,
+    },
+    {
+      src: vibes10,
+      thumbnail: vibes10,
+    },
+    {
+      src: vibes11,
+      thumbnail: vibes11,
+    },
+    {
+      src: vibes12,
+      thumbnail: vibes12,
+      thumbnailWidth: 180,
+      thumbnailHeight: 150,
+    },
+    {
+      src: vibes13,
+      thumbnail: vibes13,
+      thumbnailWidth: 180,
+      thumbnailHeight: 150,
+    },
+    {
+      src: vibes14,
+      thumbnail: vibes14,
+    },
+    {
+      src: vibes15,
+      thumbnail: vibes15,
+    },
+    {
+      src: vibes16,
+      thumbnail: vibes16,
+    },
+    {
+      src: vibes17,
+      thumbnail: vibes17,
+      thumbnailWidth: 180,
+      thumbnailHeight: 150,
+    },
+    {
+      src: vibes18,
+      thumbnail: vibes18,
     },
   ];
 
@@ -33,13 +126,12 @@ const YoursVibes: FC = () => {
         </div>
         <div className="rightSection">
           <div className="imageGrid">
-            <StackGrid columnWidth={width <= 768 ? "80%" : "33.33%"}>
-              {items.map(({ img }, key) => (
-                <div key={key} style={{ objectFit: "scale-down" }}>
-                  <img src={img} alt="vibesImage" />
-                </div>
-              ))}
-            </StackGrid>
+            <Gallery
+              images={items}
+              enableLightbox={true}
+              backdropClosesModal
+              enableImageSelection={false}
+            />
           </div>
         </div>
       </div>
