@@ -1,3 +1,114 @@
+/** LOADING PAGE **/
+
+.yoursContainerSeek {
+  width: calc((100vw / 4));
+  height: calc(100vh - 28vh);
+  animation: loadingFade 1s ease;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  position: relative;
+}
+
+.seekContainerSeek {
+  width: calc((100vw / 4));
+  height: calc(100vh - 28vh);
+  animation: transformation 2s ease;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  position: relative;
+}
+
+.usContainerSeek {
+  width: calc((100vw / 4));
+  height: calc(100vh - 28vh);
+  animation: loadingFade 1s ease;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  position: relative;
+}
+
+.meetContainerSeek {
+  width: calc((100vw / 4));
+  height: calc(100vh - 28vh);
+  animation: loadingFade 1s ease;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes loadingFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes transformation {
+  0% {
+    z-index: inherit;
+    margin-left: 0%;
+  }
+  50% {
+    z-index: inherit;
+    margin-left: 0%;
+  }
+  100% {
+    z-index: 100vw;
+    margin-left: -25%;
+  }
+}
+
+/** POST LOADING **/
+.centerSection {
+  display: flex;
+  flex-direction: row;
+}
+
+.seekContainer {
+  width: calc((100vw / 4));
+  height: calc(100vh - 28vh);
+  position: relative;
+}
+
+.seekText {
+  writing-mode: vertical-rl;
+  font-size: 3.3vw;
+  color: white;
+  margin-top: calc(((100vh - 28vh) / 4) * 2);
+  margin-left: 10%;
+  font-family: "Chivo";
+  position: absolute;
+  z-index: 100vw !important;
+}
+
+.rightSection {
+  width: calc((300vw / 4));
+  height: calc(100vh - 28vh);
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  opacity: 0;
+  animation: rightSectionFadeIn 0.8s ease;
+  animation-fill-mode: forwards;
+}
+
+.rightSection::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+@keyframes rightSectionFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .centerSection {
   display: flex;
   flex-direction: row;
@@ -5,7 +116,7 @@
 }
 
 .seekContainer {
-  width: 25%;
+  width: calc(100vw / 4);
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -15,7 +126,7 @@
 .seekText {
   writing-mode: vertical-rl;
   font-size: 3.3vw;
-  color: white;
+  color: white !important;
   height: 100%;
   width: 90%;
   margin-top: calc(((100vh - 28vh) / 2) + 2vh);
@@ -23,33 +134,28 @@
 }
 
 .rightSection {
-  width: 75%;
+  width: 75vw;
   height: calc(100vh - 28vh);
   display: inline-flex;
   flex-direction: column;
   overflow-y: scroll;
   gap: 3vw;
-  /* justify-self: flex-start; */
-  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 .topSection {
-  padding: 2% 2% 0.5% 2%;
-  margin-left: 2vw;
-  margin-top: 1vw;
+  width: 98%;
+  padding: 0% 2% 0.5% 2%;
   display: flex;
   flex-direction: row;
-  /* height: 60%; */
   align-items: flex-start;
 }
 
 .bottomSection {
+  width: 98%;
   padding: 2% 2% 0.5% 2%;
-  margin-left: 2vw;
-  margin-top: 1vw;
   display: flex;
   flex-direction: row;
-  /* height: 60%; */
   align-items: flex-start;
 }
 
