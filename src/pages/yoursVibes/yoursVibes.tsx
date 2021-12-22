@@ -126,7 +126,7 @@ const YoursVibes: FC = () => {
     <div style={{ width: "100vw", overflowY: "hidden" }}>
       <Header />
       <div className="centerSection">
-        <div className="yoursContainerHome" onClick={redirectBackToYours}>
+        <div className="yoursContainer" onClick={redirectBackToYours}>
           <img
             className="yoursImageHome"
             src={require("../../assets/images/yoursImage.png").default}

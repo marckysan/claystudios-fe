@@ -46,6 +46,12 @@
   overflow-y: hidden;
 }
 
+.yoursContainer {
+  width: calc((100vw / 4));
+  height: calc(100vh - 28vh);
+  position: relative;
+}
+
 .rightSection {
   width: calc((300vw / 4));
   height: calc(100vh - 28vh);

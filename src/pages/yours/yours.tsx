@@ -102,7 +102,7 @@ const Yours: FC = () => {
     <div style={{ width: "100vw", overflowY: "hidden" }}>
       <Header />
       <div className="centerSection">
-        <div className="yoursContainerHome">
+        <div className="yoursContainer">
           <img
             className="yoursImageHome"
             src={require("../../assets/images/yoursImage.png").default}
