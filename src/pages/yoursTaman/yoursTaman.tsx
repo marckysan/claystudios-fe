@@ -1,5 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Gallery from "react-grid-gallery";
+import { useHistory } from "react-router";
 import tamanSelamat1 from "../../assets/images/tamanSelamat/tamanSelamat1.jpg";
 import tamanSelamat10 from "../../assets/images/tamanSelamat/tamanSelamat10.jpg";
 import tamanSelamat11 from "../../assets/images/tamanSelamat/tamanSelamat11.jpg";
@@ -34,6 +35,8 @@ import Header from "../../components/header/header";
 import "./yoursTaman.css";
 
 const YoursTaman: FC = () => {
+  const history = useHistory();
+  const [isClicked, setIsClicked] = useState(false);
   const items = [
     {
       src: tamanSelamat1,
@@ -169,11 +172,18 @@ const YoursTaman: FC = () => {
     },
   ];
 
+  const redirectBackToYours = () => {
+    setIsClicked(true);
+    setTimeout(() => {
+      history.push("/yours");
+    }, 800);
+  };
+
   return (
     <div style={{ width: "100vw", overflowY: "hidden" }}>
       <Header />
       <div className="centerSection">
-        <div className="yoursContainerHome">
+        <div className="yoursContainerHome" onClick={redirectBackToYours}>
           <img
             className="yoursImageHome"
             src={require("../../assets/images/yoursImage.png").default}
@@ -181,7 +191,14 @@ const YoursTaman: FC = () => {
           />
           <p className="yoursText">yours</p>
         </div>
-        <div className="rightSection">
+        <div className="rightSection"  style={
+            isClicked
+              ? {
+                  animation: "rightSectionFadeOut 0.8s ease",
+                  animationFillMode: "forwards",
+                }
+              : {}
+          }>
           <div className="imageGrid">
             <Gallery
               images={items}

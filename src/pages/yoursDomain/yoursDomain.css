@@ -29,6 +29,15 @@
   }
 }
 
+@keyframes rightSectionFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .imageGrid {
   width: 100%;
   height: 100%;

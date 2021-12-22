@@ -15,6 +15,7 @@ const Home: FC = () => {
 
   useEffect(() => {
     document.title = "home";
+    localStorage.setItem("isYoursNested", JSON.stringify(false));
     setTimeout(() => {
       setIsLoading(false);
       console.log(isLoading);
