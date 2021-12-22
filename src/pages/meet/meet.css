@@ -157,7 +157,7 @@
 .fadingLeftEffect {
   position: relative;
   width: 100%;
-  height: 1.7vw;
+  height: 1.65vw;
   z-index: 4vw !important;
   margin-top: -1.9vw;
   background-color: white;
@@ -178,12 +178,62 @@
 .fadingRightEffect {
   position: relative;
   width: 100%;
-  height: 1.7vw;
+  height: 1.65vw;
   z-index: 4vw !important;
   margin-top: -1.9vw;
   background-color: white;
   animation: showRight 2.5s ease;
   animation-fill-mode: forwards;
+}
+
+@media (min-width: 575px) and (max-width: 801px) {
+  .fadingLeftEffect {
+    position: relative;
+    width: 100%;
+    height: 2.5vw;
+    z-index: 4vw !important;
+    margin-top: -2.5vw;
+    background-color: white;
+    opacity: 1;
+    animation: show 2.5s ease;
+    animation-fill-mode: forwards;
+  }
+
+  .fadingRightEffect {
+    position: relative;
+    width: 100%;
+    height: 2.5vw;
+    z-index: 4vw !important;
+    margin-top: -2.5vw;
+    background-color: white;
+    animation: showRight 2.5s ease;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+  .fadingLeftEffect {
+    position: relative;
+    width: 100%;
+    height: 3vw;
+    z-index: 4vw !important;
+    margin-top: -4.5vw;
+    background-color: white;
+    opacity: 1;
+    animation: show 2.5s ease;
+    animation-fill-mode: forwards;
+  }
+
+  .fadingRightEffect {
+    position: relative;
+    width: 100%;
+    height: 3vw;
+    z-index: 4vw !important;
+    margin-top: -4vw;
+    background-color: white;
+    animation: showRight 2.5s ease;
+    animation-fill-mode: forwards;
+  }
 }
 
 @keyframes showRight {
