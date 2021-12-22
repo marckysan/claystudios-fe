@@ -12,7 +12,7 @@
 .seekContainerSeek {
   width: calc((100vw / 4));
   height: calc(100vh - 28vh);
-  animation: transformation 2s ease;
+  animation: seekTransformation 2s ease;
   animation-fill-mode: forwards;
   overflow: hidden;
   position: relative;
@@ -45,7 +45,7 @@
   }
 }
 
-@keyframes transformation {
+@keyframes seekTransformation {
   0% {
     z-index: inherit;
     margin-left: 0%;
@@ -72,12 +72,12 @@
   position: relative;
 }
 
-.seekText {
+.seekTextSeek {
   writing-mode: vertical-rl;
   font-size: 3.3vw;
   color: white;
   margin-top: calc(((100vh - 28vh) / 4) * 2);
-  margin-left: 10%;
+  margin-left: 85%;
   font-family: "Chivo";
   position: absolute;
   z-index: 100vw !important;

@@ -1,9 +1,9 @@
 import React, { FC, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import seekBottomImage from "../../assets/images/seekBottomImage.svg";
+import seekTopImage from "../../assets/images/seekTopImage.svg";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
-import seekTopImage from "../../assets/images/seekTopImage.svg";
-import seekBottomImage from "../../assets/images/seekBottomImage.svg";
 import "./seek.css";
 
 const Seek: FC = () => {
@@ -75,7 +75,7 @@ const Seek: FC = () => {
             src={require("../../assets/images/seekImage.png").default}
             alt="seekImage"
           />
-          <p className="seekText">seek</p>
+          <p className="seekTextSeek">seek</p>
         </div>
         <div className="rightSection">
           <div className="topSection">
@@ -115,7 +115,7 @@ const Seek: FC = () => {
           <div className="bottomSection">
             <div className="text">
               <p className="headerBtm">Work With Us.</p>
-              <div className="leftArrow" ref={ref2}>
+              <div className="leftArrowSeek" ref={ref2}>
                 <img
                   src={require("../../assets/images/leftArrow.svg").default}
                   alt="Left Arrow"
