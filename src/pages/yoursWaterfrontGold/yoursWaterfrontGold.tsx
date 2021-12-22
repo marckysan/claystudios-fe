@@ -1,5 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Gallery from "react-grid-gallery";
+import { useHistory } from "react-router";
 import waterfront1 from "../../assets/images/waterfrontGold/waterfront1.jpg";
 import waterfront10 from "../../assets/images/waterfrontGold/waterfront10.jpg";
 import waterfront11 from "../../assets/images/waterfrontGold/waterfront11.jpg";
@@ -19,6 +20,8 @@ import "./yoursWaterfrontGold.css";
 declare var require: any;
 
 const YoursWaterfrontGold: FC = () => {
+  const history = useHistory();
+  const [isClicked, setIsClicked] = useState(false);
   const items = [
     {
       src: waterfront1,
@@ -94,11 +97,18 @@ const YoursWaterfrontGold: FC = () => {
     },
   ];
 
+  const redirectBackToYours = () => {
+    setIsClicked(true);
+    setTimeout(() => {
+      history.push("/yours");
+    }, 800);
+  };
+
   return (
     <div style={{ width: "100vw", overflowY: "hidden" }}>
       <Header />
       <div className="centerSection">
-        <div className="yoursContainerHome">
+        <div className="yoursContainerHome" onClick={redirectBackToYours}>
           <img
             className="yoursImageHome"
             src={require("../../assets/images/yoursImage.png").default}
@@ -106,7 +116,14 @@ const YoursWaterfrontGold: FC = () => {
           />
           <p className="yoursText">yours</p>
         </div>
-        <div className="rightSection">
+        <div className="rightSection"  style={
+            isClicked
+              ? {
+                  animation: "rightSectionFadeOut 0.8s ease",
+                  animationFillMode: "forwards",
+                }
+              : {}
+          }>
           {" "}
           <div className="imageGrid">
             <Gallery

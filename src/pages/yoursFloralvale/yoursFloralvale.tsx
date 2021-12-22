@@ -1,5 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Gallery from "react-grid-gallery";
+import { useHistory } from "react-router";
 import floralvale1 from "../../assets/images/floralvale/floralvale1.jpg";
 import floralvale2 from "../../assets/images/floralvale/floralvale2.jpg";
 import floralvale3 from "../../assets/images/floralvale/floralvale3.jpg";
@@ -13,6 +14,8 @@ import Header from "../../components/header/header";
 import "./yoursFloralvale.css";
 
 const YoursFloralvale: FC = () => {
+  const history = useHistory();
+  const [isClicked, setIsClicked] = useState(false);
   const items = [
     {
       src: floralvale1,
@@ -54,11 +57,18 @@ const YoursFloralvale: FC = () => {
     },
   ];
 
+  const redirectBackToYours = () => {
+    setIsClicked(true);
+    setTimeout(() => {
+      history.push("/yours");
+    }, 800);
+  };
+
   return (
     <div style={{ width: "100vw", overflowY: "hidden" }}>
       <Header />
       <div className="centerSection">
-        <div className="yoursContainerHome">
+        <div className="yoursContainerHome" onClick={redirectBackToYours}>
           <img
             className="yoursImageHome"
             src={require("../../assets/images/yoursImage.png").default}
@@ -66,7 +76,14 @@ const YoursFloralvale: FC = () => {
           />
           <p className="yoursText">yours</p>
         </div>
-        <div className="rightSection">
+        <div className="rightSection"  style={
+            isClicked
+              ? {
+                  animation: "rightSectionFadeOut 0.8s ease",
+                  animationFillMode: "forwards",
+                }
+              : {}
+          }>
           <div className="imageGrid">
             <Gallery
               images={items}

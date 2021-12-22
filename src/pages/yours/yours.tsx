@@ -14,7 +14,11 @@ import useWindowDimensions from "../../utils/viewportDimensions/useWindowDimensi
 import "./yours.css";
 
 const Yours: FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const isYoursNestedString: string | null =
+    localStorage.getItem("isYoursNested");
+  const [isLoading, setIsLoading] = useState(
+    isYoursNestedString === "true" ? false : true
+  );
   const [isClicked, setIsClicked] = useState(false);
   const { width } = useWindowDimensions();
   const history = useHistory();
@@ -34,12 +38,15 @@ const Yours: FC = () => {
 
   useEffect(() => {
     document.title = "yours";
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, [isLoading]);
+    if (isYoursNestedString !== "true") {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+    }
+  }, [isYoursNestedString, isLoading]);
 
   const redirect = (link: string) => {
+    localStorage.setItem("isYoursNested", JSON.stringify(true));
     setIsClicked(true);
     setTimeout(() => {
       history.push(`/yours/${link}`);
