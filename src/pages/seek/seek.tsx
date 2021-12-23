@@ -66,7 +66,7 @@ const Seek: FC = () => {
       <Footer />
     </div>
   ) : (
-    <div style={{ overflowY: "hidden", width: "100vw", height: "100vh" }}>
+    <div style={{ overflowY: "hidden", width: "100vw" }}>
       <Header />
       <div className="centerSection">
         <div className="seekContainer">
@@ -75,8 +75,9 @@ const Seek: FC = () => {
             src={require("../../assets/images/seekImage.png").default}
             alt="seekImage"
           />
-          <p className="seekTextSeek">seek</p>
+          <p className="seekText">seek</p>
         </div>
+
         <div className="rightSection">
           <div className="topSection">
             <img className="houseImage" src={seekTopImage} alt="topImage" />
