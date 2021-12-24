@@ -27,7 +27,7 @@ const Seek: FC = () => {
   });
 
   return isLoading ? (
-    <div style={{ width: "100%", height: "100%", overflow: "hidden" }}>
+    <div style={{ width: "100%", height: "100%", overflowY: "hidden" }}>
       <Header />
       <div className="homeSection">
         <div className="yoursContainerSeek">
@@ -83,7 +83,7 @@ const Seek: FC = () => {
             <img className="houseImage" src={seekTopImage} alt="topImage" />
             <div className="text">
               <p className="headerTop">We Redefine Spaces.</p>
-              <div className="rightArrow" ref={ref}>
+              <div className="rightArrowSeek" ref={ref}>
                 <img
                   src={require("../../assets/images/leftArrow.svg").default}
                   alt="Right Arrow"
